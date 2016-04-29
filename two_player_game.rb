@@ -27,7 +27,7 @@ def print_score
     puts "#{@p2_name}: #{@p2_score}"
 end
 
-def ask_question
+def get_answer
   response = gets.chomp.downcase
   if response.to_i == @answer
     puts "You are correct!".colorize(:green) 
@@ -70,7 +70,7 @@ if input == "yes"
       turn_changer
       generate_question
       generate_answer
-      ask_question
+      get_answer
     end 
     
     puts "Thank you for playing!"
